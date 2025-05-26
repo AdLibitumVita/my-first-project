@@ -11,15 +11,10 @@
         {
             "atomType": "Output",
             "name": "Output",
-            "x": 0.98,
-            "y": 0.5,
+            "x": 0.9780380673499268,
+            "y": 0.5069444444444444,
             "uniqueID": 1748296449665,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": 1748298335906
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -67,7 +62,7 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 10
+                    "ioValue": 5
                 },
                 {
                     "name": "yDist",
@@ -99,11 +94,30 @@
             "description": "Extrudes a 2D shape. Input can be negitive. "
         },
         {
+            "atomType": "Fusion",
+            "name": "Fusion",
+            "x": 0.5673499267935578,
+            "y": 0.4930555555555556,
+            "uniqueID": 1748298756577,
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": 1748298335906
+                },
+                {
+                    "name": "Shape 3",
+                    "ioValue": 1748298787641
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
+            "unionType": "Fusion"
+        },
+        {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.3806734992679356,
-            "y": 0.7152777777777778,
-            "uniqueID": 1748298423925,
+            "x": 0.36969253294289894,
+            "y": 0.7291666666666666,
+            "uniqueID": 1748298787641,
             "ioValues": [
                 {
                     "name": "geometry",
@@ -111,28 +125,10 @@
                 },
                 {
                     "name": "height",
-                    "ioValue": 20
+                    "ioValue": 10
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
-        },
-        {
-            "atomType": "Assembly",
-            "name": "Assembly",
-            "x": 0.5578330893118594,
-            "y": 0.5868055555555556,
-            "uniqueID": 1748298446532,
-            "ioValues": [
-                {
-                    "name": "Shape 1",
-                    "ioValue": 1748298335906
-                },
-                {
-                    "name": "Shape 2",
-                    "ioValue": 1748298423925
-                }
-            ],
-            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
         }
     ],
     "allConnectors": [
@@ -155,28 +151,21 @@
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": 1748298210178,
-            "ap2ID": 1748298423925
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 1748298335906,
-            "ap2ID": 1748296449665
+            "ap2ID": 1748298787641
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "Shape 1",
             "ap2Primary": false,
             "ap1ID": 1748298335906,
-            "ap2ID": 1748298446532
+            "ap2ID": 1748298756577
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 2",
+            "ap2Name": "Shape 3",
             "ap2Primary": false,
-            "ap1ID": 1748298423925,
-            "ap2ID": 1748298446532
+            "ap1ID": 1748298787641,
+            "ap2ID": 1748298756577
         }
     ],
     "unitsKey": "MM",
